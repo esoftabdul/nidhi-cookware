@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "creation": "2025-08-20 18:00:35.362633",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "quality_inspection_request",
+  "item_code",
+  "column_break_4",
+  "child_row_reference",
+  "section_break_7",
+  "item_serial_no",
+  "batch_no",
+  "column_break1",
+  "item_name",
+  "description",
+  "bom_no",
+  "specification_details",
+  "quality_inspection_template",
+  "manual_inspection",
+  "readings"
+ ],
+ "fields": [
+  {
+   "fieldname": "child_row_reference",
+   "fieldtype": "Data",
+   "label": "Child Row Reference",
+   "no_copy": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Item Code",
+   "oldfieldname": "item_code",
+   "oldfieldtype": "Link",
+   "options": "Item",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "item_serial_no",
+   "fieldtype": "Link",
+   "label": "Item Serial No",
+   "oldfieldname": "item_serial_no",
+   "oldfieldtype": "Link",
+   "options": "Serial No"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Link",
+   "label": "Batch No",
+   "oldfieldname": "batch_no",
+   "oldfieldtype": "Link",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break",
+   "oldfieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item_code.description",
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "oldfieldname": "description",
+   "oldfieldtype": "Small Text",
+   "width": "300px"
+  },
+  {
+   "fieldname": "bom_no",
+   "fieldtype": "Link",
+   "label": "BOM No",
+   "options": "BOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "specification_details",
+   "fieldtype": "Section Break",
+   "oldfieldtype": "Section Break",
+   "options": "Simple"
+  },
+  {
+   "fieldname": "quality_inspection_template",
+   "fieldtype": "Link",
+   "label": "Quality Inspection Template",
+   "options": "Quality Inspection Template"
+  },
+  {
+   "default": "0",
+   "fieldname": "manual_inspection",
+   "fieldtype": "Check",
+   "label": "Manual Inspection"
+  },
+  {
+   "fieldname": "readings",
+   "fieldtype": "Table",
+   "label": "Readings",
+   "oldfieldname": "qa_specification_details",
+   "oldfieldtype": "Table",
+   "options": "Quality Inspection Reading"
+  },
+  {
+   "fieldname": "quality_inspection_request",
+   "fieldtype": "Link",
+   "label": "Quality Inspection Request",
+   "options": "Quality Inspection Request",
+   "reqd": 1
+  }
+ ],
+ "icon": "fa fa-search",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-20 18:03:58.137682",
+ "modified_by": "Administrator",
+ "module": "Nidhi Cookware",
+ "name": "Quality Inspection Request Parameter",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "states": []
+}
