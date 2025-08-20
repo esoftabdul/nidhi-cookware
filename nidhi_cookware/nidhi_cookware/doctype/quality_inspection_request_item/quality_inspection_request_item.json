@@ -11,7 +11,15 @@
   "batch_no",
   "bom_no",
   "quality_inspection_template",
-  "manual_inspection"
+  "status",
+  "reading_value",
+  "manual_qty",
+  "qty_received",
+  "qty_inspected",
+  "qty_accepted",
+  "qty_rejected",
+  "manual_inspection",
+  "set_parameters"
  ],
  "fields": [
   {
@@ -49,13 +57,62 @@
    "fieldname": "manual_inspection",
    "fieldtype": "Check",
    "label": "Manual Inspection"
+  },
+  {
+   "default": "Rejected",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nAccepted\nRejected"
+  },
+  {
+   "fieldname": "reading_value",
+   "fieldtype": "Data",
+   "label": "Reading Value"
+  },
+  {
+   "depends_on": "eval:doc.manual_qty == 1 ",
+   "fieldname": "qty_inspected",
+   "fieldtype": "Float",
+   "label": "Qty Inspected"
+  },
+  {
+   "depends_on": "eval:doc.manual_qty == 1 ",
+   "fieldname": "qty_accepted",
+   "fieldtype": "Float",
+   "label": "Qty Accepted"
+  },
+  {
+   "depends_on": "eval:doc.manual_qty == 1 ",
+   "fieldname": "qty_rejected",
+   "fieldtype": "Float",
+   "label": "Qty Rejected"
+  },
+  {
+   "depends_on": "eval:doc.manual_qty == 1 ",
+   "fieldname": "qty_received",
+   "fieldtype": "Float",
+   "label": "Qty Received",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "manual_qty",
+   "fieldtype": "Check",
+   "label": "Manual Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "set_parameters",
+   "fieldtype": "Button",
+   "label": "Set Parameters"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-08-19 16:48:58.413031",
+ "modified": "2025-08-20 16:14:28.259138",
  "modified_by": "Administrator",
  "module": "Nidhi Cookware",
  "name": "Quality Inspection Request Item",
