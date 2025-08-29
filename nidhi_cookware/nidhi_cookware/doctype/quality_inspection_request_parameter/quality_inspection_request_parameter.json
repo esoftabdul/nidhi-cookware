@@ -2,14 +2,13 @@
  "actions": [],
  "creation": "2025-08-20 18:00:35.362633",
  "doctype": "DocType",
- "document_type": "Setup",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "quality_inspection_request",
-  "item_code",
   "column_break_4",
   "child_row_reference",
+  "item_code",
   "section_break_7",
   "item_serial_no",
   "batch_no",
@@ -20,7 +19,8 @@
   "specification_details",
   "quality_inspection_template",
   "manual_inspection",
-  "readings"
+  "readings",
+  "amended_from"
  ],
  "fields": [
   {
@@ -131,17 +131,39 @@
    "label": "Quality Inspection Request",
    "options": "Quality Inspection Request",
    "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Quality Inspection Request Parameter",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
- "icon": "fa fa-search",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-20 18:03:58.137682",
+ "modified": "2025-08-21 15:28:08.319755",
  "modified_by": "Administrator",
  "module": "Nidhi Cookware",
  "name": "Quality Inspection Request Parameter",
  "owner": "Administrator",
- "permissions": [],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
  "row_format": "Dynamic",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
